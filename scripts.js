@@ -1,6 +1,6 @@
 function computerSelection(){
     let random = Math.random();
-    let choice;
+    let choice = "";
     if (random < 0.33){
         choice = "rock";
     }
@@ -19,7 +19,8 @@ function playerSelection(){
 
 
 function playRound(playerSelection, computerSelection){
-    let result;
+    let result = "";
+    console.log(`Player chooses: ${playerSelection}, Computer chooses: ${computerSelection}`);
     if ((playerSelection === "rock" && computerSelection === "scissors")
         || (playerSelection === "paper" && computerSelection === "rock")
         || (playerSelection === "scissors" && computerSelection == "paper")){
@@ -45,8 +46,7 @@ function game(){
         else if (game === "computer"){
             computerScore +=1;
         }
-        console.log("Computer score: " + computerScore + "\n"
-                    + "Player score: " + playerScore )        
+        console.log(`Computer score: ${computerScore} \nPlayer score: ${playerScore}`)        
     }
     if (playerScore > computerScore){
         console.log("Player wins!");
@@ -55,7 +55,7 @@ function game(){
         console.log("Computer wins!");
     }
     else {
-        "It's a tie! That's no fun, so try again :)"
+        console.log("It's a tie! That's no fun, so try again :)");
     }
     
 }
