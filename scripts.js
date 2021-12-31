@@ -11,6 +11,7 @@ const gameContainer = document.querySelector(".game");
 const resetButton = document.createElement('button');
 resetButton.textContent = "Start again?";
 
+//reset button click listener
 resetButton.addEventListener('click',(e) => {
     computerScore = 0;
     computerScoreText.textContent = `Computer score:${computerScore}`;
@@ -20,6 +21,7 @@ resetButton.addEventListener('click',(e) => {
     gameResult.textContent = "";
 });
 
+//RPS choice buttons click listeners
 const choiceButtons = document.querySelectorAll(".choice");
 choiceButtons.forEach((button) => {  
         button.addEventListener('click',() => {
